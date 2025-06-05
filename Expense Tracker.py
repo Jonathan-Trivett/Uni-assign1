@@ -30,8 +30,8 @@ class ExpenseTracker:
         total = sum(expense.amount for expense in self.expenses)
         print(f"Total Expenses: £{total:.2f}")
 
-def main():
-    tracker = ExpenseTracker()
+    def main():
+        tracker = ExpenseTracker()
     
     while True:
         print("\nExpense Tracker Menu:")
