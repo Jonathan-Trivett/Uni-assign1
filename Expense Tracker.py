@@ -25,6 +25,11 @@ class ExpenseTracker:
             print("Expense List:")
             for i, expense in enumerate(self.expenses, start=1):
                 print(f"{i}. {expense.date} - {expense.amount} - {expense.description}")
+
+    def total_expenses(self):
+        total = sum(expense.amount for expense in self.expenses)
+        print(f"Total Expenses: £{total:.2f}")
+        
                 
 
     
