@@ -1,6 +1,7 @@
+# The Expense class now takes 'date' as a parameter in the constructor.
 class Expense:
-    def __init__(self, amount, description):
-        self.date = date 
+    def __init__(self, date, amount, description):
+        self.date = date  # Fixed: date is now passed as a parameter
         self.amount = amount
         self.description = description
         
@@ -30,9 +31,10 @@ class ExpenseTracker:
         total = sum(expense.amount for expense in self.expenses)
         print(f"Total Expenses: £{total:.2f}")
 
-    def main():
-        tracker = ExpenseTracker()
-    
+# The main program logic is now outside the class so 'tracker' is accessible.
+if __name__ == "__main__":
+    tracker = ExpenseTracker()  # Fixed: tracker is now accessible in the main program
+
     while True:
         print("\nExpense Tracker Menu:")
         print("1. Add Expense")
@@ -47,8 +49,7 @@ class ExpenseTracker:
             date = input("Enter date (YYYY-MM-DD): ")
             amount = float(input("Enter amount: "))
             description = input("Enter description: ")
-            expense = Expense(amount, description)
-            expense.date = date
+            expense = Expense(date, amount, description)  # Fixed: pass date to constructor
             tracker.add_expense(expense)
             print("Expense added successfully.")
         
