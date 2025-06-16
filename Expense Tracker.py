@@ -41,7 +41,7 @@ class ExpenseTracker:
         else:
             print("Expense List:")
             for i, expense in enumerate(self.expenses, start=1):
-                print(f"{i}. {expense.date} - {expense.amount} - {expense.description}")
+                print(f"{i}. {expense.date} - £{expense.amount:.2f} - {expense.description}")
 
     def total_expenses(self):
         total = sum(expense.amount for expense in self.expenses)
@@ -75,7 +75,7 @@ if __name__ == "__main__":
         if choice == '1':
             date = input("Enter date (YYYY-MM-DD): ")
             try:
-                amount = float(input("Enter amount: "))
+                amount = float(input("Enter amount (£): "))
             except ValueError:
                 print("Invalid amount. Please enter a number.")
                 continue
