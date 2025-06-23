@@ -5,13 +5,18 @@
         "description": "Hamburger"
     },
     {
-        "date": "2027-01-18",
-        "amount": 300.0,
-        "description": "Airsoft Kit"
+        "date": "2024-02-12",
+        "amount": 50.0,
+        "description": "A desk"
     },
     {
-        "date": "2025-03-04",
-        "amount": 5.0,
-        "description": "Jaisons Mcdconalds"
+        "date": "2025-06-15",
+        "amount": 20.0,
+        "description": "Cat Food"
+    },
+    {
+        "date": "2024-02-12",
+        "amount": 20.0,
+        "description": "Tacos"
     }
 ]
